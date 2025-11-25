@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  background-color: #14141c;
+}
+
+body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  height: 32px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.write-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.write-box {
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #272733;
+  font-size: 16px;
+  outline: none;
+  height: 200px;
+  width: 100%;
+  resize: none;
+}
+
+.options-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.options-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-text {
+  font-weight: 400;
+}
+
+.black {
+  color: #272733;
+  background: transparent;
+}
+
+.results-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.results-box {
+  border: 1px transparent;
+  border-radius: 12px;
+  height: 134px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+}
+
+.purple {
+  background-color: #d3a1fa;
+}
+
+.yellow {
+  background-color: #ff9f00;
+}
+
+.orange {
+  background-color: #ff8159;
+}
+
+.letters-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.letters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.letters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.line-grey {
+  border: none;
+  border-radius: 8px;
+  height: 10px;
+  width: 100%;
+  background-color: #212129;
+}
+
+.line-purple {
+  border: none;
+  border-radius: 8px;
+  height: 10px;
+  background-color: #d3a1fa;
+}
+
+.letter-quantity {
+  font-weight: 100;
+}
+
+.letter-quantity-button {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  border: none;
+}

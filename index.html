@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/imgHead.png" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-box">
+        <div class="header-content">
+          <img class="header-icon" src="./images/imgHead.png" alt="" />
+
+          <h3>Character Counter</h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="title-box">
+        <h1 class="title">Analyze your text in real-time.</h1>
+      </div>
+    </main>
+
+    <main class="write-content">
+      <div>
+        <textarea
+          maxlength=""
+          id="boxCharacters"
+          class="write-box"
+          placeholder="Start typing here... (or paste your text)"
+        ></textarea>
+      </div>
+
+      <div class="options-box">
+        <div class="options-content">
+          <div>
+            <input id="excludeSpaces" type="checkbox" />
+            <span class="option-text">Exclude Spaces</span>
+          </div>
+
+          <div>
+            <input id="limitCharacter" type="checkbox" />
+            <span class="option-text">Set Character Limit:</span>
+            <span id="limitCharacterText"></span>
+          </div>
+        </div>
+
+        <p class="option-text">Approx. reading time: 1 minute</p>
+      </div>
+    </main>
+
+    <main class="results-content">
+      <div class="results-box purple">
+        <h1 id="numberCharacters" class="black">00</h1>
+        <h3 class="option-text black">Total Characters</h3>
+      </div>
+
+      <div class="results-box yellow">
+        <h1 id="numberWords" class="black">00</h1>
+        <h3 class="option-text black">Word Count</h3>
+      </div>
+
+      <div class="results-box orange">
+        <h1 id="numberSentences" class="black">00</h1>
+        <h3 class="option-text black">Sentence Count</h3>
+      </div>
+    </main>
+
+    <main>
+      <div class="letters-box">
+        <h3>Letter Density</h3>
+
+        <div id="letters-container" class="letters-container">
+          <!-- <div class="letters">
+            <span>E</span>
+
+            <div class="line-grey">
+              <div class="line-purple"></div>
+            </div>
+
+            <span class="letter-quantity">40(16.06%)</span>
+          </div> -->
+        </div>
+
+        <button class="letter-quantity-button">See more ></button>
+
+        <!-- <span id="listLetters"
+          >No characters found, Start typing to see letter density.</span
+        > -->
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

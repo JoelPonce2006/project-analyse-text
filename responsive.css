@@ -1,0 +1,37 @@
+@media (min-width: 768px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .title-box {
+    max-width: 590px;
+    margin: auto;
+  }
+
+  .options-box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .options-content {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .results-content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 32px 220px;
+  }
+
+  .title-box {
+    max-width: 590px;
+    margin: auto;
+  }
+}
