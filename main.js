@@ -41,18 +41,16 @@ boxCharacters.addEventListener("input", (event) => {
   let result = "";
   let lettersTotal = 0;
 
-  letters.forEach((letter) => {
-    lettersTotal = lettersTotal + letter[1];
-  });
+  letters
+    .sort((a, b) => b[1] - a[1])
+    .forEach((letter) => {
+      // [h, 1] <== letter
+      lettersTotal = lettersTotal + letter[1];
 
-  letters.forEach((letter) => {
-    //100 / 5 = 20
-
-    let width = (100 * letter[1]) / lettersTotal;
-    // [h, 1]
-    result =
-      result +
-      `<div class="letters">
+      let width = (100 * letter[1]) / lettersTotal;
+      result =
+        result +
+        `<div class="letters">
             <span>${letter[0]}</span>
 
             <div class="line-grey">
@@ -60,10 +58,10 @@ boxCharacters.addEventListener("input", (event) => {
             </div>
 
             <span class="letter-quantity">${letter[1]}(${width.toFixed(
-        2
-      )}%)</span>
+          2
+        )}%)</span>
           </div>`;
-  });
+    });
 
   lettersContainer.innerHTML = result;
   result = "";
