@@ -7,7 +7,10 @@ const limitCharacter = document.getElementById("limitCharacter");
 const limitCharacterText = document.getElementById("limitCharacterText");
 const listLetters = document.getElementById("listLetters");
 const lettersContainer = document.getElementById("letters-container");
+const allLettersContainer = document.getElementById("all-letters-container");
+const seeMoreLettersButton = document.getElementById("see-more-letters-button");
 
+const maxVisibleLetters = 4;
 let hasExcludeSpaces;
 let text;
 let hasLimitCharacter;
@@ -39,32 +42,65 @@ boxCharacters.addEventListener("input", (event) => {
 
   const letters = Object.entries(letterRecords); //[[h, 2], [o, 1], [l, 1], [a, 1]]
   let result = "";
+  let restResult = "";
   let lettersTotal = 0;
 
-  letters
-    .sort((a, b) => b[1] - a[1])
-    .forEach((letter) => {
-      // [h, 1] <== letter
-      lettersTotal = lettersTotal + letter[1];
+  const orderLetters = letters.sort((a, b) => b[1] - a[1]);
 
-      let width = (100 * letter[1]) / lettersTotal;
-      result =
-        result +
-        `<div class="letters">
-            <span>${letter[0]}</span>
+  orderLetters.forEach((letter, index) => {
+    // [h, 1] <== letter
+    lettersTotal = lettersTotal + letter[1];
+
+    let width = (100 * letter[1]) / lettersTotal;
+
+    const letterHtml =
+      // result +
+      `<div class="letters">
+            <span class="letter-box">${letter[0]}</span>
 
             <div class="line-grey">
               <div class="line-purple" style="width: ${width}px"></div>
             </div>
 
             <span class="letter-quantity">${letter[1]}(${width.toFixed(
-          2
-        )}%)</span>
+        2
+      )}%)</span>
           </div>`;
-    });
+
+    if (index < maxVisibleLetters) {
+      result += letterHtml;
+    } else {
+      restResult += letterHtml;
+    }
+  });
 
   lettersContainer.innerHTML = result;
+  allLettersContainer.innerHTML = restResult;
   result = "";
+
+  if (orderLetters.length > maxVisibleLetters) {
+    seeMoreLettersButton.style.display = "block";
+    allLettersContainer.style.display = "none";
+    seeMoreLettersButton.innerHTML = "See More";
+    seeMoreLettersButton.dataset.visible = "false";
+  } else {
+    seeMoreLettersButton.style.display = "none";
+    allLettersContainer.style.display = "none";
+  }
+
+  seeMoreLettersButton.addEventListener("click", () => {
+    const isVisible = seeMoreLettersButton.dataset.visible === "true";
+
+    if (isVisible) {
+      allLettersContainer.style.display = "none";
+      seeMoreLettersButton.innerHTML = "See more";
+      seeMoreLettersButton.dataset.visible = "false";
+    } else {
+      allLettersContainer.style.display = "block";
+      seeMoreLettersButton.innerHTML = "See less";
+      seeMoreLettersButton.dataset.visible = "true";
+    }
+  });
 
   numberCharacters.innerText = hasExcludeSpaces
     ? text.replaceAll(" ", "").length
