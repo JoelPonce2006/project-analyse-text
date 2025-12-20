@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./images/favicon  .png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPLITER</title>
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+
+  <header class="content-header">
+    <div class="title-header">
+      <h1 class="title-text">
+        SPLI <br />
+        TTER
+      </h1>
+    </div>
+  </header>
+
+  <body>
+    <main>
+      <div class="content-box">
+        <div class="content-bill">
+          <div>
+            <h4 class="subtitles">Bill</h4>
+          </div>
+
+          <div>
+            <textarea
+              id="box-value"
+              class="box-value"
+              name=""
+              placeholder=""
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="content-bill">
+          <div>
+            <h4 class="subtitles">Select Tip %</h4>
+          </div>
+
+          <div class="box-buttons-porcentage">
+            <button id="button-porcentage" class="buttons-porcentage">
+              5%
+            </button>
+            <button id="button-porcentage" class="buttons-porcentage">
+              10%
+            </button>
+            <button id="button-porcentage" class="buttons-porcentage">
+              15%
+            </button>
+            <button id="button-porcentage" class="buttons-porcentage">
+              25%
+            </button>
+            <button id="button-porcentage" class="buttons-porcentage">
+              50%
+            </button>
+            <button id="button-custom" class="buttons-porcentage custom">
+              Custom
+            </button>
+          </div>
+        </div>
+
+        <div class="content-bill">
+          <div>
+            <h4 class="subtitles">Number of People</h4>
+          </div>
+
+          <div class="box-values-peoples">
+            <textarea
+              id="box-people"
+              class="box-value-people"
+              name=""
+              placeholder=""
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-tipAndTotal container">
+        <div class="content-tipAndTotal">
+          <div class="box-TipAmount">
+            <div>
+              <h5>Tip Amount</h5>
+            </div>
+
+            <div class="content-labels">
+              <span class="label-person">/ person</span>
+              <span id="tipAmount-value" class="label-amount">0.00</span>
+            </div>
+          </div>
+
+          <div class="box-totalPerson">
+            <div>
+              <h5>Total</h5>
+            </div>
+
+            <div class="content-labels">
+              <span class="label-person">/ person</span>
+              <span id="totalPerson-value" class="label-amount">0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button id="button-reset" class="button-reset">RESET</button>
+        </div>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

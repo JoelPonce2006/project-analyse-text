@@ -1,0 +1,40 @@
+@media screen and (min-width: 768px) {
+  body {
+    padding: 50px 125px;
+  }
+
+  .content-header {
+    padding: 50px 144px 70px 144px;
+  }
+
+  .content-bill {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 150px 125px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-height: 530px;
+  }
+
+  .content-box {
+    width: 100%;
+  }
+
+  .content-tipAndTotal {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+  }
+}
